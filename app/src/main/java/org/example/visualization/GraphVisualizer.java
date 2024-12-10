@@ -40,6 +40,16 @@ public class GraphVisualizer {
                 System.out.println(scc);
             }
 
+            // Check if the graph is planar
+            if (graph.isPlanar()) {
+                System.out.println("The graph is planar.");
+            } else {
+                System.out.println("The graph is not planar.");
+            }
+
+            // Print the graph edges
+            graph.printGraph();
+
             // Perform BFS and DFS
             bfs.performBFS("0");
             dfs.performDFS("0");

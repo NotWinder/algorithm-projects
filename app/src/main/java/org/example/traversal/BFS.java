@@ -53,6 +53,12 @@ public class BFS {
                 }
             }
         }
+
+        // Print the BFS path edges
+        System.out.println("BFS Path Edges:");
+        for (Edge edge : bfsPathEdges) {
+            System.out.println("Edge from " + edge.source + " to " + edge.target);
+        }
     }
 
     private Node findNodeById(String id) {

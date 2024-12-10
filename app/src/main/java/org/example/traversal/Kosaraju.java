@@ -50,7 +50,11 @@ public class Kosaraju {
 
     // Step 2: Transpose the graph (reverse all edges)
     public Graph transposeGraph(Graph graph) {
-        Graph transposedGraph = new Graph();
+        // Kosaraju.java (where you create Graph instance)
+        List<Node> nodes = new ArrayList<>(); // You can populate this list with your nodes
+        List<Edge> edges = new ArrayList<>(); // Populate this with edges
+        Graph transposedGraph = new Graph(nodes, edges);
+
         transposedGraph.nodes = new ArrayList<>(graph.nodes); // Copy nodes
         transposedGraph.edges = new ArrayList<>(); // Initialize edges
 

@@ -58,6 +58,11 @@ public class DFS {
                 }
             }
         }
+        // Print the BFS path edges
+        System.out.println("DFS Path Edges:");
+        for (Edge edge : dfsPathEdges) {
+            System.out.println("Edge from " + edge.source + " to " + edge.target);
+        }
     }
 
     private Node findNodeById(String id) {
