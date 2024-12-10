@@ -1,10 +1,14 @@
 plugins {
     id 'java'
     id 'application'
+    id 'com.github.johnrengelman.shadow' version '8.0.0'  // Add this line
 }
 
 group = 'org.example'
 version = '1.0-SNAPSHOT'
+
+sourceCompatibility = '1.8' // Set your Java version here
+targetCompatibility = '1.8'
 
 repositories {
     mavenCentral()
@@ -13,8 +17,17 @@ repositories {
 dependencies {
     // JSON processing
     implementation 'com.google.code.gson:gson:2.10.1'
+    testImplementation 'junit:junit:4.13'
+}
+
+jar {
+    manifest {
+        attributes(
+            'Main-Class': 'org.example.cli.GraphCLI'  // Replace with your main class
+        )
+    }
 }
 
 application {
-    mainClass = 'org.example.Main'
+    mainClass = 'org.example.cli.GraphCLI'
 }

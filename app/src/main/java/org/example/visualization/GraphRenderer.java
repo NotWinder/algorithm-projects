@@ -137,7 +137,7 @@ public class GraphRenderer {
             return;
         }
 
-        int width = 6000;
+        int width = 1920;
         int height = 200;
         int nodeSize = 50;
         int spacing = 150;
